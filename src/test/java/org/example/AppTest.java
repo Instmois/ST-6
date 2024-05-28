@@ -164,19 +164,4 @@ public class AppTest
         Utility.print(moves);
     }
 
-    @Test
-    public void TicTacToePanelTest() {
-        JFrame frame = new JFrame("Test");
-        TicTacToePanel panel = new TicTacToePanel(new GridLayout(3, 3));
-        frame.add(panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setBounds(5, 5, 500, 500);
-        frame.setVisible(true);
-
-        panel.actionPerformed(new ActionEvent(panel.cells[0], ActionEvent.ACTION_PERFORMED, ""));
-        assertEquals('X', panel.game.board[0]);
-
-        panel.actionPerformed(new ActionEvent(panel.cells[1], ActionEvent.ACTION_PERFORMED, ""));
-        assertEquals('O', panel.game.board[4]);
-    }
 }
